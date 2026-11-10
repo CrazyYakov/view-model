@@ -1,0 +1,21 @@
+{
+    "name": "rkov/view-model",
+    "description": "View models",
+    "type": "library",
+    "require": {
+        "php": "8"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rkov\\ViewModel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rochev yakov",
+            "email": "gitarar98@yanex.ru"
+        }
+    ],
+    "minimum-stability": "stable"
+}
