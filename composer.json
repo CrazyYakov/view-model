@@ -1,21 +1,53 @@
 {
     "name": "rkov/view-model",
-    "description": "View models",
+    "description": "View models for REST API \u2014 create model representations using dependency injection",
     "type": "library",
-    "require": {
-        "php": "8"
-    },
+    "keywords": [
+        "view-model",
+        "resource",
+        "api",
+        "rest",
+        "json",
+        "transformer",
+        "rkov"
+    ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Rochev Yakov",
+            "email": "gitarar98@yanex.ru"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.0",
+        "friendsofphp/php-cs-fixer": "^3.40",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpstan/phpstan-strict-rules": "^1.5"
+    },
     "autoload": {
         "psr-4": {
             "Rkov\\ViewModel\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "rochev yakov",
-            "email": "gitarar98@yanex.ru"
+    "autoload-dev": {
+        "psr-4": {
+            "Rkov\\ViewModel\\Tests\\": "tests/"
         }
-    ],
-    "minimum-stability": "stable"
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse --memory-limit=256M",
+        "phpunit": "phpunit",
+        "cs-fix": "php-cs-fixer fix --dry-run --diff",
+        "qa": [
+            "@phpstan",
+            "@phpunit",
+            "@cs-fix"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

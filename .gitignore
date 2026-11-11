@@ -1,0 +1,22 @@
+# dependencies
+/vendor/
+/composer.phar
+
+# IDE
+/.vscode/
+/.idea/
+*.iml
+
+# tooling caches
+/.phpunit.cache/
+/.phpunit.result.cache
+/.php-cs-fixer.cache
+/.phpstan/
+/build/
+/coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
